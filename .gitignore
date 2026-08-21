@@ -1,0 +1,29 @@
+# Data — never commit raw or processed SCADA files (large + licensing)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Notebook cruft
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Model artifacts
+*.pkl
+*.joblib
+reports/model_results/*.pkl
+reports/model_results/*.joblib
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
