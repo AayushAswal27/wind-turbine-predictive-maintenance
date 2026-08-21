@@ -1,25 +1,12 @@
-# Core
 pandas==2.2.2
 numpy==1.26.4
 scipy==1.13.1
-
-# Reading EDP .xlsx files
 openpyxl==3.1.5
-
-# ML
 scikit-learn==1.5.1
 xgboost==2.1.1
-
-# Explainability
 shap==0.46.0
-
-# Visualization
 matplotlib==3.9.2
 seaborn==0.13.2
-
-# Notebook
 jupyter==1.0.0
 ipykernel==6.29.5
-
-# Persistence
 joblib==1.4.2
