@@ -37,6 +37,11 @@ from the **EDP open wind-farm data** — 5 onshore turbines in Portugal.
 | Sensors | 83 raw SCADA channels |
 | Real faults | 12 events: 6 hydraulic, 3 gearbox, 2 generator-bearing, 1 transformer |
 
+![Fault event structure](reports/figures/02_event_structure.png)
+
+*The 12 fault events across 5 turbines: hydraulic dominates, transformer has a single
+example — which is why the target stays binary.*
+
 The core difficulty — and what makes this realistic — is that **12 fault events is
 very few**. This scarcity drives every design decision below.
 
@@ -50,6 +55,11 @@ EDA showed sensor signatures before faults are real but **not** simple threshold
 they are fault-specific (a hot generator bearing predicts a bearing failure, not a
 hydraulic one) and buried in noise. This ruled out naive rules and motivated
 engineered temporal features.
+
+![Pre-fault sensor drift](reports/figures/02_prefault_genbearing.png)
+
+*Generator-bearing temperatures reaching sustained highs approaching the labeled
+fault window (red), while ambient stays flat — the signal is real but noisy.*
 
 ### 2. Honest validation: leave-turbines-out
 
@@ -96,6 +106,11 @@ temperatures of the components that fail, and engineered features dominate raw
 sensors. For the **transformer failure**, the #1 risk driver was the **transformer's
 own temperature** — the model localises to the correct component, turning a risk
 score into a maintenance instruction.
+
+![SHAP summary](reports/figures/08_shap_summary.png)
+
+*SHAP feature importance: 24-hour rolling temperatures of the components that fail
+dominate, and engineered features rank above raw sensors.*
 
 ### 6. Deliverable — a fused risk score
 
