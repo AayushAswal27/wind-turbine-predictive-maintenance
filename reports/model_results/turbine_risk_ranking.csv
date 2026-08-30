@@ -1,0 +1,6 @@
+asset_id,mean_risk_recent,pct_high_critical_recent,mean_risk_overall,had_fault,fault_types,priority
+0,0.15845592385187507,0.10098988081026979,0.11276832664282185,1,"Generator bearing failure, Hydraulic group",1
+11,0.15639281290692947,0.13098682095789135,0.09778717378630729,1,Transformer failure,2
+21,0.14062452752356733,0.07809271769157555,0.09273463323765177,1,"Gearbox bearings damaged, Gearbox failure, Hydraulic group",3
+13,0.11265576039384372,0.06944283964596862,0.09582583221883398,1,Hydraulic group,4
+10,0.10262837758437084,0.019124785576115917,0.09777399024508662,1,"Gearbox failure, Generator bearing failure, Hydraulic group",5
